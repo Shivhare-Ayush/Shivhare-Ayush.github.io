@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: '20.17.0'  # Ensure this matches your project's Node.js version
 
@@ -28,7 +28,7 @@ jobs:
       run: npm run build
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./dist  # Ensure this matches the build output folder
 
@@ -45,6 +45,6 @@ jobs:
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
