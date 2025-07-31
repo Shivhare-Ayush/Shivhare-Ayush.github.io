@@ -8,7 +8,12 @@ const SideBar = () => {
 
     <div className="bg-transparent backdrop-blur-sm border border-white/10 rounded w-1/2 h-max p-6 text-white hidden lg:flex lg:sticky top-24 flex-col items-start ">
       <span className="before:block before:absolute before:-inset-2 before:-skew-y-0  relative inline-block mb-8">
-        <span className="font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 bg-gradient-to-r from-pink-800  to-purple-800">Ayush Shivhare</span>
+        <span className="font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 bg-gradient-to-r from-purple-800  to-pink-800 block pb-2">
+          Ayush
+          </span>
+          <span className="font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 bg-gradient-to-r from-purple-800  to-pink-800 block">
+          Shivhare
+          </span>
       </span>
       
       <p className="font-[anzo1] mb-6">Studying CS at UTD</p>

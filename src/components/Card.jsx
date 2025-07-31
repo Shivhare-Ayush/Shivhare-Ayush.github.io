@@ -12,7 +12,7 @@ function Card({ title, description, children, image, link, techNames }) {
 
   return (
     <div
-      className='bg-transparent backdrop-blur-sm border border-white/10 rounded-xl p-7 m-2 hover:shadow-lg hover:shadow-[#070605] hover:scale-105 transition-all duration-1000 ease-in-out relative'
+      className='bg-transparent backdrop-blur-sm border border-white/10 rounded-xl p-7 m-2 hover:border-white/50 transition-all duration-500 ease-in-out relative'
       onClick={toggleExpand}
       style={{
         cursor: 'pointer',
@@ -20,7 +20,7 @@ function Card({ title, description, children, image, link, techNames }) {
         overflow: 'hidden',
       }}
     >
-      <div className='absolute top-2 right-2 text-white lg:text-3xl hover:text-purple-400 hover:scale-150 transition-all duration-500 ease-in-out'>
+      <div className='absolute top-2 right-2 text-white lg:text-3xl hover:text-purple-400 transition-all duration-300 ease-in-out'>
         <BsArrowUpRight
           className={`absolute top-2 right-2 transition-all duration-500 ease-in-out ${isExpanded ? 'opacity-0' : 'opacity-100'}`}/>
         <BsArrowDownLeft

@@ -5,7 +5,7 @@ I have a Notion page with my well documented experience with making this project
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-TODO:
+Version 1 TODO:
 Whole'lotta icons:
 - Add socials
 - Add technologies
@@ -17,6 +17,17 @@ Readability Buff
 (Should be implemented on the page level)
 - Backdrop Blur
 (saw a video on it)
+
+Version 2 TODO:
+- Add Certifications 
+- Change around Name Colors 
+- Other front end techniques for UI UX
+
+Content Update:
+- cleaned up the effects on the website a little, toned down some longer animations 
+- verified version 1 and 2 requirements are all met
+- thinking about adding parallax to the website but leave that for future versions
+- most importantly UPDATED WEBSITE WITH NEW EXPERIENCES AND CONTENT
 
 BUGS:
 - Mobile Support

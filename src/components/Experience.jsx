@@ -2,10 +2,22 @@
 
 const experiences = [
   {
+    title: 'Head of Engineering',
+    company: 'Nebula Labs',
+    description: 'Fostered the engineers for all Nebula Labs projects. Overseeing all engineering tasks and development.',
+    date: 'May 2025 - Present',
+  },
+  {
+    title: 'ACM Education Officer',
+    company: 'ACM',
+    description: 'Assumed an managerial role at ACM\'s Mentorship Program. Developed solutions for scaling the Mentor Program to the biggest its ever been.',
+    date: 'January 2025 - Present',
+  },
+  {
     title: 'Software Engineer',
     company: 'Nebula Labs',
     description: 'Focused on building responsive UI components.',
-    date: 'August 2024 - Present',
+    date: 'August 2024 - May 2025',
   },
   {
     title: 'Mobile Developer',

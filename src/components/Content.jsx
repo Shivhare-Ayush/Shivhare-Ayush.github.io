@@ -2,6 +2,7 @@
 import Card from './Card'
 import trendsPreview from '../assets/trendsPreview.png'
 import portfolio from '../assets/Portfolio.png'
+import api from '../assets/API_Workshop.png'
 import TechTags from './TechTags'
 import Experience from './Experience.jsx'
 
@@ -17,7 +18,7 @@ const Content = () => {
               I started software development in high school where I built simple programs for competitions and classes. Around the time I was a senior I participated in my first hackathon and was introduced to a world of developers and learned the joy of collaborative programming. Fast forward to today, I’m developing web services used by thousands of students, and pursuing a computer science major at The University of Texas at Dallas. I’ve had the opportunity to work on a project at Nebula Labs, which provides tools to Students like data visualization, indexing, comparing, and is web-hosted.
               <br />
               <br />
-              Aside from clubs, I have started development on a prediction AI for Stocks. In my free time Ive built a game combining Lua and Roblox engine.
+              Aside from clubs, I have more projects in development for Nebula Labs and ACM. In my free time Ive built a game combining Lua and Roblox engine.
               <br />
               <br />
               Outside of computer science, I practice Taekwondo, play Badminton, and am always reading up on topics that interest me.
@@ -35,8 +36,9 @@ const Content = () => {
       <section id="projects" className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Projects</h2> 
         <div className="space-y-4">
-          <Card title="Trends" techNames={["React","JavaScript", "Tailwind CSS","Github", "Figma"]} description="I work on this website with a team at Nebula Labs. We maintain and update this website on Github, and its built on React and Tailwind frontend and our API team uses GO for the backend." image={trendsPreview} link="https://trends.utdnebula.com" />
-          <Card title="Portfolio" techNames={["React", "JavaScript", "Node.js", "Tailwind CSS", "Github", ]} description="Description of project 2" image={portfolio} link="https://shivhare-ayush.github.io" />
+          <Card title="Trends" techNames={["React","JavaScript", "Tailwind CSS","Github", "Figma",]} description="I work on this website with a team at Nebula Labs. The website has helped 20,000 unique users find their classes for future semesters. We maintain and update this website on Github, and its built on React and Tailwind frontend and our API team uses GO for the backend." image={trendsPreview} link="https://trends.utdnebula.com" />
+          <Card title="API Workshop" techNames={["React", "JavaScript", "Node.js", "Tailwind CSS", "Github", ]} description="Boiler Plate app I made as a resource. This was used to teach UTD Students about APIs in the ACM Mentor Program API Workshop for the Spring 2025 Series." image={api} link="https://github.com/Shivhare-Ayush/acm-education-api-demo" />
+          <Card title="Portfolio" techNames={["React", "JavaScript", "Node.js", "Tailwind CSS", "Github", ]} description="A test. This website was a test. Can I apply the technologies which I have been exposed to? How far can I take this and where will it take me?" image={portfolio} link="https://shivhare-ayush.github.io" />
         </div>
       </section>
     </div>
