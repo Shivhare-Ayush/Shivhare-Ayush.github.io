@@ -1,5 +1,5 @@
-//import React from 'react'
-import React, { useState, useEffect } from 'react'
+// import React from 'react'
+import { useState, useEffect } from 'react'
 import Page1 from './pages/Page1'
 import useMousePosition from './hooks/useMousePosition'
 
