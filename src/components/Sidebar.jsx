@@ -6,7 +6,7 @@ import { FaGithubSquare } from "react-icons/fa";
 const SideBar = () => {
   return (
 
-    <div className="bg-transparent backdrop-blur-sm border border-white/10 rounded w-1/2 h-max p-6 text-white hidden lg:flex lg:sticky top-24 flex-col items-start ">
+    <div className="bg-transparent backdrop-blur-sm border border-white/10 rounded w-1/3 h-max p-6 text-white hidden lg:flex lg:sticky top-24 flex-col items-start ">
       <span className="before:block before:absolute before:-inset-2 before:-skew-y-0  relative inline-block mb-8">
         <span className="font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 bg-gradient-to-r from-purple-800  to-pink-800 block pb-2">
           Ayush
@@ -18,9 +18,36 @@ const SideBar = () => {
       
       <p className="font-[anzo1] mb-6">Studying CS at UTD</p>
       <nav className="flex flex-col gap-4 ">
-        <a href="#about" className="hover:text-purple-400 hover:scale-125 hover:translate-x-5 transition duration-200">About</a>
-        <a href="#experience" className="hover:text-purple-400 hover:scale-125 hover:translate-x-5 transition duration-200">Experience</a>
-        <a href="#projects" className="hover:text-purple-400 hover:scale-125 hover:translate-x-5 transition duration-200">Projects</a>
+        <a
+          href="#about"
+          onClick={e => {
+            e.preventDefault();
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="hover:text-purple-400 hover:scale-125 hover:translate-x-5 transition-all duration-200 ease-in-out"
+        >
+          About
+        </a>
+        <a
+          href="#experience"
+          onClick={e => {
+            e.preventDefault();
+            document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="hover:text-purple-400 hover:scale-125 hover:translate-x-5 transition-all duration-200 ease-in-out"
+        >
+          Experience
+        </a>
+        <a
+          href="#projects"
+          onClick={e => {
+            e.preventDefault();
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="hover:text-purple-400 hover:scale-125 hover:translate-x-5 transition-all duration-200 ease-in-out"
+        >
+          Projects
+        </a>
       </nav>
       <div className="flex gap-4 mt-8">
         <a href="https://www.linkedin.com/in/ayushshiv//" target="_blank" rel="noreferrer">

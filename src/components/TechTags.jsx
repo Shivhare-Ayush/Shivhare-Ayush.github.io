@@ -1,9 +1,11 @@
 //import React from 'react';
-import { BiLogoJava, BiLogoJavascript, BiLogoTailwindCss, BiLogoReact, BiLogoTypescript, BiLogoPython, BiLogoNodejs, BiLogoGithub, BiLogoGit, BiLogoFigma } from 'react-icons/bi';
+import { BiLogoGoLang, BiLogoJava, BiLogoJavascript, BiLogoTailwindCss, BiLogoReact, BiLogoTypescript, BiLogoPython, BiLogoNodejs, BiLogoGithub, BiLogoGit, BiLogoFigma } from 'react-icons/bi';
+import { GrSwift } from "react-icons/gr";
 import Tag from './Tag';
 import PropTypes from 'prop-types';
 
 const techStack = [
+  { icon: BiLogoGoLang, title: 'Go' },
   { icon: BiLogoJava, title: 'Java' },
   { icon: BiLogoJavascript, title: 'JavaScript' },
   { icon: BiLogoTailwindCss, title: 'Tailwind CSS' },
@@ -14,6 +16,7 @@ const techStack = [
   { icon: BiLogoGithub, title: 'GitHub' },
   { icon: BiLogoGit, title: 'Git' },
   { icon: BiLogoFigma, title: 'Figma' },
+  { icon: GrSwift, title: 'Swift' },
   // Add more tech stack items as needed
 ];
 
