@@ -16,7 +16,7 @@ const SideBar = () => {
   return (
 
     <div className="bg-transparent backdrop-blur-sm border border-[var(--border)] rounded w-1/3 h-max p-6 text-[var(--text)] hidden lg:flex lg:sticky top-24 flex-col items-start transition-colors duration-300">
-      <div className="flex items-center gap-4 mb-8 w-full">
+      <div className="flex items-center justify-between mb-8 w-full">
         <span className="before:block before:absolute before:-inset-2 before:-skew-y-0 relative inline-block">
           <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block pb-2`}>
             Ayush
@@ -28,7 +28,7 @@ const SideBar = () => {
         <img
           src={ayushPhoto}
           alt="Ayush Shivhare"
-          className="w-32 h-32 rounded-full object-cover object-top border-2 border-[var(--border)] flex-shrink-0"
+          className="w-40 h-40 rounded-full object-cover object-top border-2 border-[var(--border)] flex-shrink-0"
         />
       </div>
       
