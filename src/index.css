@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Theme CSS Variables ──────────────────────────────────────── */
+:root {
+  --bg:         #0c0a09;
+  --bg-mid:     #302C27;
+  --text:       #ffffff;
+  --text-muted: #9ca3af;
+  --grid-color: #ddd;
+  --border:     rgba(255,255,255,0.1);
+}
+
+[data-theme="light"] {
+  --bg:         #EEE5DA;
+  --bg-mid:     #D9CFC4;
+  --text:       #262424;
+  --text-muted: #57534e;
+  --grid-color: #b0a89e;
+  --border:     rgba(38,36,36,0.2);
+}
+
 @layer utilities {
 
   .dashed-grid-paper {
@@ -10,8 +29,8 @@
     --grid-strength: 1px;
     --grid-dash: 10px;
     --grid-gap: 5px;
-    --grid-color: #ddd;
-    --paper-color: #0c0a09;
+    --grid-color: var(--grid-color);
+    --paper-color: var(--bg);
 
   background-color: var(--paper-color);
   background-size: var(--grid-dash) var(--grid-dash), var(--grid-size) var(--grid-size);
@@ -24,14 +43,14 @@
 
   .grid-cols-1 {
     background-image:
-      linear-gradient(to right,#0c0a09 2px, transparent 2px),
-      linear-gradient(to bottom,#0c0a09 2px, transparent 2px);
-    background-size: 2.5rem 2.5rem; 
+      linear-gradient(to right, var(--bg) 2px, transparent 2px),
+      linear-gradient(to bottom, var(--bg) 2px, transparent 2px);
+    background-size: 2.5rem 2.5rem;
     background-position: center center;
   }
   .grid-dots-1 {
-    background: 
-      radial-gradient(circle, transparent 1px, #0c0a09 1px);
+    background:
+      radial-gradient(circle, transparent 1px, var(--bg) 1px);
     background-size: 1rem 1rem;
     background-position: center center;
   }
@@ -51,7 +70,7 @@
     transform: translateY(-50%);
     width: 1.5rem; /* Adjust the size of the node */
     height: 1.5rem; /* Adjust the size of the node */
-    background-color: #272d36; /* Example color */
+    background-color: var(--bg-mid);
     z-index: 1;
   }
 
@@ -61,7 +80,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #e5e7eb;
+    background-color: var(--text-muted);
   }
   
 }
@@ -115,6 +134,7 @@
   src: url(./assets/Anzo5.woff2);
 }
 html, body {
-  background-color: #0c0a09; /* Dark color to match your design */
-  color: white; /* Ensure the text color is readable */
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

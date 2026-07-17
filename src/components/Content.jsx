@@ -13,7 +13,7 @@ const Content = () => {
     <main className="relative flex-1 p-6">
       <section id="about" className="mb-64 font-[Anzo3]" aria-labelledby="about-heading">
         <h2 id="about-heading" className="text-2xl font-semibold mb-4 font-[Anzo1]">About</h2>
-        <div className="relative rounded-xl border border-white/10">
+        <div className="relative rounded-xl border border-[var(--border)]">
           <div className="absolute inset-0 bg-transparent backdrop-blur-0 blur-sm rounded-xl pointer-events-none"></div>
           <div className="relative p-4">
             <p>

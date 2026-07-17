@@ -11,7 +11,7 @@ function Card({ title, description, children, image, link, techNames, imageAlt }
 
   return (
     <div
-      className='bg-transparent backdrop-blur-sm border border-white/10 rounded-xl p-7 m-2 hover:border-white/50 transition-all duration-500 ease-in-out relative'
+      className='bg-transparent backdrop-blur-sm border border-[var(--border)] rounded-xl p-7 m-2 hover:border-[var(--text)]/50 transition-all duration-500 ease-in-out relative'
       onClick={toggleExpand}
       tabIndex={0} // Make focusable
       role="button" // Announce as button
@@ -25,21 +25,21 @@ function Card({ title, description, children, image, link, techNames, imageAlt }
         overflow: 'hidden',
       }}
     >
-        <div className='absolute top-7 right-7 text-white text-lg hover:text-purple-400 transition-all duration-300 ease-in-out'>
+        <div className='absolute top-7 right-7 text-[var(--text)] text-lg hover:text-purple-400 transition-all duration-300 ease-in-out'>
           <BsChevronDown
             className={`transition-transform duration-500 ease-in-out ${isExpanded ? '-rotate-180' : 'rotate-0'}`} />
         </div>
         <h3 className='text-xl font-bold mb-2 font-[Anzo1]'>{title}</h3>
         {image && <img src={image} alt={imageAlt} className='rounded-xl' />}
         <TechTags techNames={techNames} />
-        <p className='text-slate-100 text-sm lg:text-base md:text-md m-4 font-[Anzo3]'>{description}</p>
+        <p className='text-[var(--text)] text-sm lg:text-base md:text-md m-4 font-[Anzo3]'>{description}</p>
         {children}
         {isExpanded && (
           <a
             href={link}
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-transparent text-gray-100 underline px-3 inline-flex items-center gap-1 hover:text-purple-400 transition-all duration-300 ease-in-out'
+            className='bg-transparent text-[var(--text)] underline px-3 inline-flex items-center gap-1 hover:text-purple-400 transition-all duration-300 ease-in-out'
             aria-label={`Visit ${title} project`}
           >
             Visit Project

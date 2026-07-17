@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Tag({ icon: Icon, title }) {
   return (
-    <div className='flex items-center bg-transparent text-gray-100 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 m-1'>
+    <div className='flex items-center bg-transparent text-[var(--text)] backdrop-blur-sm border border-[var(--border)] rounded-full px-3 py-1 m-1'>
       {Icon && <Icon className='text-xl' />}
       <span className={`font-[Anzo3]${Icon ? ' ml-2' : ''}`}>{title}</span>
     </div>

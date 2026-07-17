@@ -10,7 +10,7 @@ function ArticleCard({ title, excerpt, date, tags, platforms }) {
 
   return (
     <div
-      className='bg-transparent backdrop-blur-sm border border-white/10 rounded-xl p-7 m-2 hover:border-white/50 transition-all duration-500 ease-in-out relative'
+      className='bg-transparent backdrop-blur-sm border border-[var(--border)] rounded-xl p-7 m-2 hover:border-[var(--text)]/50 transition-all duration-500 ease-in-out relative'
       onClick={toggleExpand}
       tabIndex={0}
       role="button"
@@ -24,13 +24,13 @@ function ArticleCard({ title, excerpt, date, tags, platforms }) {
         overflow: 'hidden',
       }}
     >
-      <div className='absolute top-7 right-7 text-white text-lg hover:text-purple-400 transition-all duration-300 ease-in-out'>
+      <div className='absolute top-7 right-7 text-[var(--text)] text-lg hover:text-purple-400 transition-all duration-300 ease-in-out'>
         <BsChevronDown
           className={`transition-transform duration-500 ease-in-out ${isExpanded ? '-rotate-180' : 'rotate-0'}`} />
       </div>
 
       <h3 className='text-xl font-bold mb-1 font-[Anzo1]'>{title}</h3>
-      <p className='text-sm text-gray-500 mb-2 font-[Anzo3]'>{date}</p>
+      <p className='text-sm text-[var(--text-muted)] mb-2 font-[Anzo3]'>{date}</p>
 
       <div className='flex flex-wrap mb-2'>
         {tags.map((tag, i) => (
@@ -38,7 +38,7 @@ function ArticleCard({ title, excerpt, date, tags, platforms }) {
         ))}
       </div>
 
-      <p className='text-slate-100 text-sm lg:text-base md:text-md m-4 font-[Anzo3]'>{excerpt}</p>
+      <p className='text-[var(--text)] text-sm lg:text-base md:text-md m-4 font-[Anzo3]'>{excerpt}</p>
 
       {isExpanded && (
         <div className='flex flex-wrap gap-3 mt-4 ml-4'>
@@ -51,7 +51,7 @@ function ArticleCard({ title, excerpt, date, tags, platforms }) {
                 target='_blank'
                 rel='noopener noreferrer'
                 onClick={e => e.stopPropagation()}
-                className='flex items-center gap-2 bg-transparent text-gray-100 underline px-3 hover:text-purple-400 transition-all duration-300 ease-in-out'
+                className='flex items-center gap-2 bg-transparent text-[var(--text)] underline px-3 hover:text-purple-400 transition-all duration-300 ease-in-out'
                 aria-label={`Read on ${platform.name}`}
               >
                 <PlatformIcon className='text-2xl' />
