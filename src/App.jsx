@@ -1,23 +1,27 @@
 // import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Page1 from './pages/Page1'
 import useMousePosition from './hooks/useMousePosition'
+import useTheme from './theme/useTheme'
 
 const PARTICLE_LIFETIME = 750 // ms
+const SPAWN_INTERVAL    = 8   // ms — ~120fps cap, no state re-render cost
+const MAX_PARTICLES     = 150 // max alive at once
 
 const App = () => {
+  const { activePreset, mode } = useTheme()
   const { mousePosition } = useMousePosition()
   const { x, y } = mousePosition
   const [particles, setParticles] = useState([])
-  const [lastParticleTime, setLastParticleTime] = useState(0);
+  const lastParticleTime = useRef(0)
   const [showScroll, setShowScroll] = useState(false);
 
   // Add a particle on mouse move
   useEffect(() => {
     if (x === null || y === null) return;
     const now = Date.now();
-    if (now - lastParticleTime < 16) return; // ~60fps
-    setLastParticleTime(now);
+    if (now - lastParticleTime.current < SPAWN_INTERVAL) return;
+    lastParticleTime.current = now;
 
     const pageHeight = document.documentElement.scrollHeight;
     const maxY = pageHeight - 100;
@@ -25,14 +29,14 @@ const App = () => {
     const id = now + Math.random();
     setParticles(particles => {
       const next = [...particles, { id, x, y: clampedY }]
-      return next.length > 100 ? next.slice(next.length - 100) : next
+      return next.length > MAX_PARTICLES ? next.slice(next.length - MAX_PARTICLES) : next
     })
     // Remove after lifetime
     const timeout = setTimeout(() => {
       setParticles(particles => particles.filter(p => p.id !== id))
     }, PARTICLE_LIFETIME)
     return () => clearTimeout(timeout)
-  }, [x, y, lastParticleTime])
+  }, [x, y])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,11 +50,19 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const bgFrom = mode === 'light' ? '#EEE5DA' : '#0C0A09'
+  const bgMid  = mode === 'light' ? '#D9CFC4'  : '#302C27'
+
   return (
     <div className="relative flex transition-all duration-50">
       <div
-        className='fixed inset-0 bg-gradient-to-r from-[#0C0A09] via-[#302C27] to-[#0C0A09] mask-grid-pattern'
-        style={{ zIndex: 0, pointerEvents: 'none' }} // <-- Add this!
+        className="fixed inset-0 mask-grid-pattern"
+        style={{
+          zIndex: 0,
+          pointerEvents: 'none',
+          background: `linear-gradient(to right, ${bgFrom}, ${bgMid}, ${bgFrom})`,
+          transition: 'background 0.3s ease',
+        }}
       >
         {particles.map(particle => (
           <div
@@ -63,7 +75,7 @@ const App = () => {
               height: '200px',
               borderRadius: '50%',
               transform: 'translate(-50%, -50%)',
-              filter: 'blur(10px)',
+              filter: 'blur(15px)',
               opacity: 0.7,
               animation: `fadeout ${PARTICLE_LIFETIME}ms forwards`
             }}
@@ -82,17 +94,8 @@ const App = () => {
           ↑
         </button>
       )}
-      {/* Add fadeout keyframes */}
-      <style>
-        {`
-          @keyframes fadeout {
-            0%   { opacity: 0.1; background: #8B5CF6; }
-            50%  { opacity: 0.7; background: #EC4899; }
-            80% { opacity: .1;   background: #3B82F6; }
-            100% { opacity: 0;   background: #3B82F6; }
-          }
-        `}
-      </style>
+      {/* Gradient preset keyframes — driven by active theme preset */}
+      <style>{activePreset.keyframes}</style>
     </div>
   )
 }
