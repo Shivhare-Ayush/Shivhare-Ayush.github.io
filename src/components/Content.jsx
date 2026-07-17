@@ -1,6 +1,6 @@
 //import React from 'react'
 import Card from './Card'
-import newsify from '../assets/newsify.png'
+import newsify from '../assets/newsify.jpg'
 import trendsPreview from '../assets/trendsPreview.png'
 import portfolio from '../assets/Portfolio.png'
 import api from '../assets/API_Workshop.png'
