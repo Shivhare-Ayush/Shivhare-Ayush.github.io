@@ -30,7 +30,11 @@ function Card({ title, description, children, image, link, techNames, imageAlt }
             className={`transition-transform duration-500 ease-in-out ${isExpanded ? '-rotate-180' : 'rotate-0'}`} />
         </div>
         <h3 className='text-xl font-bold mb-2 font-[Anzo1]'>{title}</h3>
-        {image && <img src={image} alt={imageAlt} className='rounded-xl' />}
+        {image && (
+          <div className='w-full h-48 rounded-xl overflow-hidden mb-2'>
+            <img src={image} alt={imageAlt} className='w-full h-full object-cover object-center' />
+          </div>
+        )}
         <TechTags techNames={techNames} />
         <p className='text-[var(--text)] text-sm lg:text-base md:text-md m-4 font-[Anzo3]'>{description}</p>
         {children}
