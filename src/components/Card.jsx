@@ -2,6 +2,14 @@ import { useState } from 'react'; //React,
 import PropTypes from 'prop-types';
 import { BsChevronDown, BsBoxArrowUpRight } from 'react-icons/bs';
 import TechTags from './TechTags';
+const positionClasses = {
+  top:    'object-top',
+  center: 'object-center',
+  bottom: 'object-bottom',
+  left:   'object-left',
+  right:  'object-right',
+};
+
 function Card({ title, description, children, image, link, techNames, imageAlt, imagePosition }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -32,7 +40,7 @@ function Card({ title, description, children, image, link, techNames, imageAlt, 
         <h3 className='text-xl font-bold mb-2 font-[Anzo1]'>{title}</h3>
         {image && (
           <div className='w-full h-48 rounded-xl overflow-hidden mb-2'>
-            <img src={image} alt={imageAlt} className={`w-full h-full object-cover object-${imagePosition || 'center'}`} />
+            <img src={image} alt={imageAlt} className={`w-full h-full object-cover ${positionClasses[imagePosition] || positionClasses.center}`} />
           </div>
         )}
         <TechTags techNames={techNames} />
