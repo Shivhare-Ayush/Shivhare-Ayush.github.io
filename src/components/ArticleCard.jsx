@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { BsArrowUpRight, BsArrowDownLeft } from 'react-icons/bs';
+import { BsChevronDown } from 'react-icons/bs';
 import Tag from './Tag';
 
 function ArticleCard({ title, excerpt, date, tags, platforms }) {
@@ -25,10 +25,8 @@ function ArticleCard({ title, excerpt, date, tags, platforms }) {
       }}
     >
       <div className='absolute top-2 right-2 text-white lg:text-3xl hover:text-purple-400 transition-all duration-300 ease-in-out'>
-        <BsArrowUpRight
-          className={`absolute top-2 right-2 transition-all duration-500 ease-in-out ${isExpanded ? 'opacity-0' : 'opacity-100'}`} />
-        <BsArrowDownLeft
-          className={`absolute top-2 right-2 transition-all duration-500 ease-in-out ${isExpanded ? 'opacity-100' : 'opacity-0'}`} />
+        <BsChevronDown
+          className={`transition-transform duration-500 ease-in-out ${isExpanded ? '-rotate-180' : 'rotate-0'}`} />
       </div>
 
       <h3 className='text-xl font-bold mb-1 font-[Anzo1]'>{title}</h3>

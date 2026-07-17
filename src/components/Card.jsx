@@ -27,7 +27,7 @@ function Card({ title, description, children, image, link, techNames, imageAlt }
     >
         <div className='absolute top-2 right-2 text-white lg:text-3xl hover:text-purple-400 transition-all duration-300 ease-in-out'>
           <BsChevronDown
-            className={`transition-transform duration-500 ease-in-out ${isExpanded ? 'rotate-180' : 'rotate-0'}`} />
+            className={`transition-transform duration-500 ease-in-out ${isExpanded ? '-rotate-180' : 'rotate-0'}`} />
         </div>
         <h3 className='text-xl font-bold mb-2 font-[Anzo1]'>{title}</h3>
         {image && <img src={image} alt={imageAlt} className='rounded-xl' />}
