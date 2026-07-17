@@ -88,7 +88,7 @@ const App = () => {
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 left-8 z-50 bg-purple-700 text-white rounded-full p-3 shadow-lg hover:bg-purple-500 transition"
+          className="fixed bottom-8 left-8 z-50 bg-transparent backdrop-blur-sm border border-[var(--border)] text-[var(--text)] rounded-full p-3 hover:text-purple-400 hover:border-purple-400 transition-all duration-200"
           aria-label="Scroll to top"
         >
           ↑
