@@ -25,7 +25,7 @@ function Card({ title, description, children, image, link, techNames, imageAlt }
         overflow: 'hidden',
       }}
     >
-        <div className='absolute top-2 right-2 text-white text-lg hover:text-purple-400 transition-all duration-300 ease-in-out'>
+        <div className='absolute top-7 right-7 text-white text-lg hover:text-purple-400 transition-all duration-300 ease-in-out'>
           <BsChevronDown
             className={`transition-transform duration-500 ease-in-out ${isExpanded ? '-rotate-180' : 'rotate-0'}`} />
         </div>
