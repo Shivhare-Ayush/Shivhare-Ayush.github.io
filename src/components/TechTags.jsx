@@ -1,23 +1,30 @@
 //import React from 'react';
 import { BiLogoGoLang, BiLogoJava, BiLogoJavascript, BiLogoTailwindCss, BiLogoReact, BiLogoTypescript, BiLogoPython, BiLogoNodejs, BiLogoGithub, BiLogoGit, BiLogoFigma } from 'react-icons/bi';
 import { GrSwift } from "react-icons/gr";
+import { SiDocker, SiPostgresql, SiFastapi, SiLinux, SiAmazonwebservices, SiLua, SiRoblox } from 'react-icons/si';
 import Tag from './Tag';
 import PropTypes from 'prop-types';
 
 const techStack = [
-  { icon: BiLogoGoLang, title: 'Go' },
   { icon: BiLogoJava, title: 'Java' },
-  { icon: BiLogoJavascript, title: 'JavaScript' },
-  { icon: BiLogoTailwindCss, title: 'Tailwind CSS' },
-  { icon: BiLogoReact, title: 'React' },
-  { icon: BiLogoTypescript, title: 'TypeScript' },
   { icon: BiLogoPython, title: 'Python' },
+  { icon: BiLogoGoLang, title: 'Go' },
+  { icon: BiLogoJavascript, title: 'JavaScript' },
+  { icon: BiLogoTypescript, title: 'TypeScript' },
+  { icon: SiLua, title: 'Lua' },
+  { icon: BiLogoReact, title: 'React' },
+  { icon: SiFastapi, title: 'FastAPI' },
   { icon: BiLogoNodejs, title: 'Node.js' },
-  { icon: BiLogoGithub, title: 'GitHub' },
+  { icon: BiLogoTailwindCss, title: 'Tailwind CSS' },
+  { icon: SiPostgresql, title: 'PostgreSQL' },
+  { icon: SiDocker, title: 'Docker' },
+  { icon: SiLinux, title: 'Linux' },
+  { icon: SiAmazonwebservices, title: 'AWS' },
+  { icon: SiRoblox, title: 'Roblox' },
+  { icon: BiLogoGithub, title: 'Github' },
   { icon: BiLogoGit, title: 'Git' },
   { icon: BiLogoFigma, title: 'Figma' },
   { icon: GrSwift, title: 'Swift' },
-  // Add more tech stack items as needed
 ];
 
 function TechTags({ techNames }) {
