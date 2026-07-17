@@ -5,7 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import ThemeToggle from './ThemeToggle';
 import useTheme from '../theme/useTheme';
-import ayushPhoto from '../assets/Ayush.png';
+import ayushPhoto from '../assets/Ayush.jpg';
 
 const SideBar = () => {
   const { mode } = useTheme();
@@ -28,7 +28,7 @@ const SideBar = () => {
         <img
           src={ayushPhoto}
           alt="Ayush Shivhare"
-          className="w-16 h-16 rounded-full object-cover object-top border-2 border-[var(--border)] flex-shrink-0"
+          className="w-32 h-32 rounded-full object-cover object-top border-2 border-[var(--border)] flex-shrink-0"
         />
       </div>
       
