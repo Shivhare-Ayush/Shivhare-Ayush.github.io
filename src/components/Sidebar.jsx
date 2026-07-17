@@ -5,6 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import ThemeToggle from './ThemeToggle';
 import useTheme from '../theme/useTheme';
+import ayushPhoto from '../assets/Ayush.png';
 
 const SideBar = () => {
   const { mode } = useTheme();
@@ -15,14 +16,21 @@ const SideBar = () => {
   return (
 
     <div className="bg-transparent backdrop-blur-sm border border-[var(--border)] rounded w-1/3 h-max p-6 text-[var(--text)] hidden lg:flex lg:sticky top-24 flex-col items-start transition-colors duration-300">
-      <span className="before:block before:absolute before:-inset-2 before:-skew-y-0  relative inline-block mb-8">
-        <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block pb-2`}>
-          Ayush
+      <div className="flex items-center gap-4 mb-8 w-full">
+        <span className="before:block before:absolute before:-inset-2 before:-skew-y-0 relative inline-block">
+          <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block pb-2`}>
+            Ayush
           </span>
           <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block`}>
-          Shivhare
+            Shivhare
           </span>
-      </span>
+        </span>
+        <img
+          src={ayushPhoto}
+          alt="Ayush Shivhare"
+          className="w-16 h-16 rounded-full object-cover object-top border-2 border-[var(--border)] flex-shrink-0"
+        />
+      </div>
       
       <p className="font-[anzo1] mb-6">CS @ UTD · Software Developer Intern @ IBM</p>
       <nav className="flex flex-col gap-4 ">
