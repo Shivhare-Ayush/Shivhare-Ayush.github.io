@@ -1,5 +1,6 @@
 //import React from 'react'
 import Card from './Card'
+import newsify from '../assets/newsify.png'
 import trendsPreview from '../assets/trendsPreview.png'
 import portfolio from '../assets/Portfolio.png'
 import api from '../assets/API_Workshop.png'
@@ -38,8 +39,9 @@ const Content = () => {
             title="Newsify"
             techNames={["Python", "FastAPI", "React", "TypeScript", "Docker", "AWS"]}
             description="Media intelligence platform that ingests YouTube transcripts, extracts structured claims with Gemini, clusters narratives using UMAP + HDBSCAN, and surfaces risk-scored misinformation signals through a retro-newspaper-styled dashboard."
-            imageAlt="Newsify project"
-            link="https://github.com/Team-12-CS-4485/placeholders-frontend"
+            image={newsify}
+            imageAlt="Newsify project screenshot"
+            link="https://newsifyutd.vercel.app"
           />
           <Card
             title="Roguelike"
