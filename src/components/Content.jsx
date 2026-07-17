@@ -41,6 +41,7 @@ const Content = () => {
             description="Media intelligence platform that ingests YouTube transcripts, extracts structured claims with Gemini, clusters narratives using UMAP + HDBSCAN, and surfaces risk-scored misinformation signals through a retro-newspaper-styled dashboard."
             image={newsify}
             imageAlt="Newsify project screenshot"
+            imagePosition="top"
             link="https://newsifyutd.vercel.app"
           />
           <Card
@@ -64,6 +65,7 @@ const Content = () => {
             description="Boiler plate app made as a teaching resource. Used to teach UTD students about APIs in the ACM Mentor Program API Workshop for the Spring 2025 Series."
             image={api}
             imageAlt="Screenshot of API Workshop app"
+            imagePosition="top"
             link="https://github.com/Shivhare-Ayush/acm-education-api-demo"
           />
           <Card
@@ -72,6 +74,7 @@ const Content = () => {
             description="A test. This website was a test. Can I apply the technologies which I have been exposed to? How far can I take this and where will it take me?"
             image={portfolio}
             imageAlt="Screenshot of Portfolio website"
+            imagePosition="top"
             link="https://shivhare-ayush.github.io"
           />
         </div>

@@ -2,7 +2,7 @@ import { useState } from 'react'; //React,
 import PropTypes from 'prop-types';
 import { BsChevronDown, BsBoxArrowUpRight } from 'react-icons/bs';
 import TechTags from './TechTags';
-function Card({ title, description, children, image, link, techNames, imageAlt }) {
+function Card({ title, description, children, image, link, techNames, imageAlt, imagePosition }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -32,7 +32,7 @@ function Card({ title, description, children, image, link, techNames, imageAlt }
         <h3 className='text-xl font-bold mb-2 font-[Anzo1]'>{title}</h3>
         {image && (
           <div className='w-full h-48 rounded-xl overflow-hidden mb-2'>
-            <img src={image} alt={imageAlt} className='w-full h-full object-cover object-center' />
+            <img src={image} alt={imageAlt} className={`w-full h-full object-cover object-${imagePosition || 'center'}`} />
           </div>
         )}
         <TechTags techNames={techNames} />
@@ -61,6 +61,7 @@ Card.propTypes = {
   children: PropTypes.node,
   image: PropTypes.string,
   imageAlt: PropTypes.string,
+  imagePosition: PropTypes.string,
   link: PropTypes.string,
   techNames: PropTypes.arrayOf(PropTypes.string),
 };
