@@ -4,16 +4,22 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import ThemeToggle from './ThemeToggle';
+import useTheme from '../theme/useTheme';
 
 const SideBar = () => {
+  const { mode } = useTheme();
+  const nameGradient = mode === 'light'
+    ? 'bg-gradient-to-r from-[#55A8F7] via-[#FFEDD5] to-[#FF6B6B]'
+    : 'bg-gradient-to-r from-[#4B0082] via-[#FF1493] to-[#FE865B]';
+
   return (
 
     <div className="bg-transparent backdrop-blur-sm border border-[var(--border)] rounded w-1/3 h-max p-6 text-[var(--text)] hidden lg:flex lg:sticky top-24 flex-col items-start transition-colors duration-300">
       <span className="before:block before:absolute before:-inset-2 before:-skew-y-0  relative inline-block mb-8">
-        <span className="font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 bg-gradient-to-r from-purple-800  to-pink-800 block pb-2">
+        <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block pb-2`}>
           Ayush
           </span>
-          <span className="font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 bg-gradient-to-r from-purple-800  to-pink-800 block">
+          <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block`}>
           Shivhare
           </span>
       </span>
