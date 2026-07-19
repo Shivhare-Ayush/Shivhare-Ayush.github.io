@@ -5,7 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import ThemeToggle from './ThemeToggle';
 import useTheme from '../theme/useTheme';
-import ayushPhoto from '../assets/Ayush.jpg';
+import ayushPhoto from '../assets/Ayush.png';
 
 const SideBar = () => {
   const { mode } = useTheme();
