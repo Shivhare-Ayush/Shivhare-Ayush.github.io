@@ -28,7 +28,7 @@ const SideBar = () => {
         <img
           src={ayushPhoto}
           alt="Ayush Shivhare"
-          className="w-40 h-40 rounded-full object-cover object-top border-2 border-[var(--border)] flex-shrink-0"
+          className="w-40 h-40 rounded-full object-cover object-center border-2 border-[var(--border)] flex-shrink-0"
         />
       </div>
       
