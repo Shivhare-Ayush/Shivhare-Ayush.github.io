@@ -25,11 +25,13 @@ const SideBar = () => {
             Shivhare
           </span>
         </span>
-        <img
-          src={ayushPhoto}
-          alt="Ayush Shivhare"
-          className="w-40 h-40 rounded-full object-cover object-center border-2 border-[var(--border)] flex-shrink-0"
-        />
+        <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-[var(--border)] flex-shrink-0">
+          <img
+            src={ayushPhoto}
+            alt="Ayush Shivhare"
+            className="w-full h-full object-cover object-top scale-[1.75] origin-top"
+          />
+        </div>
       </div>
       
       <p className="font-[anzo1] mb-6">CS @ UTD · Software Developer Intern @ IBM</p>
