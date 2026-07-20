@@ -5,6 +5,11 @@ I have a Notion page with my well documented experience with making this project
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+TODO:
+redo experience design and content 
+write blogs 
+show better progress on roblox game (write about it too)
+
 Version 1 TODO:
 Whole'lotta icons:
 - Add socials
