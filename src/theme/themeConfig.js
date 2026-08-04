@@ -149,10 +149,24 @@ export const GRADIENT_PRESETS = [
       }
     `,
   },
+  {
+    id: 'crimsonUltrasonic',
+    label: 'Crimson Ultrasonic',
+    description: 'Ultrasonic blue → crimson carrot → antique white — electric dusk glow',
+    swatch: 'linear-gradient(135deg, #0C10E3, #FF4500, #F8E6D2)',
+    keyframes: `
+      @keyframes fadeout {
+        0%   { opacity: 0.1; background: #0C10E3; }
+        50%  { opacity: 0.7; background: #FF4500; }
+        80%  { opacity: 0.3; background: #F8E6D2; }
+        100% { opacity: 0;   background: #F8E6D2; }
+      }
+    `,
+  },
 ];
 
 export const DEFAULT_MODE = 'dark';
-export const DEFAULT_PRESET = 'neonStorm';
+export const DEFAULT_PRESET = 'crimsonUltrasonic';
 
 export const LS_KEY_MODE = 'portfolio-theme-mode';
 export const LS_KEY_PRESET = 'portfolio-theme-preset';

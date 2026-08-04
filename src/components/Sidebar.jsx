@@ -8,20 +8,28 @@ import useTheme from '../theme/useTheme';
 import ayushPhoto from '../assets/Ayush.png';
 
 const SideBar = () => {
-  const { mode } = useTheme();
-  const nameGradient = mode === 'light'
-    ? 'bg-gradient-to-r from-[#55A8F7] via-[#FFEDD5] to-[#FF6B6B]'
-    : 'bg-gradient-to-r from-[#4B0082] via-[#FF1493] to-[#FE865B]';
+  const { activePreset } = useTheme();
+  const nameGradientStyle = {
+    background: activePreset?.swatch || 'linear-gradient(135deg, #0C10E3, #FF4500, #F8E6D2)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  };
 
   return (
 
     <div className="bg-transparent backdrop-blur-sm border border-[var(--border)] rounded w-1/3 h-max p-6 text-[var(--text)] hidden lg:flex lg:sticky top-24 flex-col items-start transition-colors duration-300">
       <div className="flex items-center justify-between mb-8 w-full">
         <span className="before:block before:absolute before:-inset-2 before:-skew-y-0 relative inline-block">
-          <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block pb-2`}>
+          <span
+            className="font-[Anzo2] relative bg-clip-text text-6xl block pb-2"
+            style={nameGradientStyle}
+          >
             Ayush
           </span>
-          <span className={`font-[Anzo2] relative text-[#0c0a09] bg-clip-text text-6xl text-opacity-10 ${nameGradient} block`}>
+          <span
+            className="font-[Anzo2] relative bg-clip-text text-6xl block"
+            style={nameGradientStyle}
+          >
             Shivhare
           </span>
         </span>
@@ -29,7 +37,7 @@ const SideBar = () => {
           <img
             src={ayushPhoto}
             alt="Ayush Shivhare"
-            className="w-full h-full object-cover object-top scale-[1.75] origin-top"
+            className="w-full h-full object-cover object-top scale-[1.35] origin-top"
           />
         </div>
       </div>
